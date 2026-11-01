@@ -15,3 +15,12 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: pytest -q
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint gate
+        run: |
+          echo "this gate fails on purpose, to change the CI failure signature"
+          exit 1
