@@ -8,8 +8,8 @@ def average(values):
 
 def median(values):
     """Return the middle value, or the mean of the two middle values."""
-    values.sort()
-    n = len(values)
+    ordered = sorted(values)
+    n = len(ordered)
     if n % 2 == 1:
-        return values[n // 2]
-    return (values[n // 2 - 1] + values[n // 2]) // 2
+        return ordered[n // 2]
+    return (ordered[n // 2 - 1] + ordered[n // 2]) / 2
